@@ -6,13 +6,18 @@
 <title>La Partita dei Suoni - Polish Reading Training</title>
 <meta name="description" content="A playful football-themed Polish pronunciation plan for an Italian dad who wants to read aloud to his daughter.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://jakubsykulski-maker.github.io/la-partita-dei-suoni/">
 <meta property="og:title" content="La Partita dei Suoni: Juventus vs Lech">
 <meta property="og:description" content="Polish reading training for an Italian dad: football drills, hard sounds, and a final bedtime-story match.">
-<meta property="og:image" content="./og-derby-wymowy.png">
+<meta property="og:image" content="https://jakubsykulski-maker.github.io/la-partita-dei-suoni/og-derby-wymowy.png">
+<meta property="og:image:secure_url" content="https://jakubsykulski-maker.github.io/la-partita-dei-suoni/og-derby-wymowy.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="La Partita dei Suoni: Juventus vs Lech">
 <meta name="twitter:description" content="A football-themed Polish pronunciation plan for reading bedtime stories aloud.">
-<meta name="twitter:image" content="./og-derby-wymowy.png">
+<meta name="twitter:image" content="https://jakubsykulski-maker.github.io/la-partita-dei-suoni/og-derby-wymowy.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fredoka:wght@500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -181,7 +186,7 @@
 
   .crest {
     width: 5.2rem;
-    height: 6.2rem;
+    aspect-ratio: 1;
     border-radius: 18px;
     display: grid;
     place-items: center;
@@ -193,16 +198,17 @@
 
   .crest img {
     display: block;
-    width: auto;
-    height: auto;
-    max-width: 88%;
-    max-height: 88%;
+    width: 88%;
+    height: 88%;
     object-fit: contain;
+    object-position: center;
   }
 
   .crest img[src*="lech"] {
-    max-width: 94%;
-    max-height: 94%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   .fallback-mark {
@@ -213,6 +219,10 @@
     font-family: 'Fredoka', system-ui, sans-serif;
     font-size: 1.7rem;
     font-weight: 700;
+  }
+
+  .fallback-mark[hidden] {
+    display: none !important;
   }
 
   .fallback-mark.juve {
@@ -624,7 +634,6 @@
 
     .crest {
       width: 4.8rem;
-      height: 5.7rem;
     }
 
     main {
