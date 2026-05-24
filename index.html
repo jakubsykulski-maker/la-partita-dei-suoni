@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>La Partita dei Suoni - Polish Reading Training</title>
+<meta name="description" content="A playful football-themed Polish pronunciation plan for an Italian dad who wants to read aloud to his daughter.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="La Partita dei Suoni: Juventus vs Lech">
+<meta property="og:description" content="Polish reading training for an Italian dad: football drills, hard sounds, and a final bedtime-story match.">
+<meta property="og:image" content="./og-derby-wymowy.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La Partita dei Suoni: Juventus vs Lech">
+<meta name="twitter:description" content="A football-themed Polish pronunciation plan for reading bedtime stories aloud.">
+<meta name="twitter:image" content="./og-derby-wymowy.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fredoka:wght@500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #171717;
+    --paper: #fff8eb;
+    --paper-deep: #f1dfbd;
+    --pitch: #6fae87;
+    --pitch-dark: #2d6755;
+    --lech: #1c64c7;
+    --juve: #111111;
+    --gold: #f4c84a;
+    --red: #dc2626;
+    --line: rgba(23, 23, 23, 0.14);
+    --muted: #5f584f;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 12% 8%, rgba(255,255,255,0.85) 0 4.2rem, transparent 4.3rem),
+      radial-gradient(circle at 84% 12%, rgba(255,255,255,0.8) 0 3.6rem, transparent 3.7rem),
+      linear-gradient(180deg, #9dcdb6 0, var(--paper) 28rem);
+    color: var(--ink);
+    font-family: 'Lora', serif;
+    line-height: 1.55;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  a { color: inherit; }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    min-height: min(92vh, 820px);
+    display: grid;
+    align-items: center;
+    padding: 1.25rem;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: auto -8rem -11rem -8rem;
+    height: 30rem;
+    background:
+      linear-gradient(90deg, rgba(255,255,255,0.22) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(255,255,255,0.18) 1px, transparent 1px),
+      radial-gradient(circle at 50% 50%, transparent 0 4rem, rgba(255,255,255,0.38) 4.05rem 4.2rem, transparent 4.25rem),
+      linear-gradient(135deg, #5ea174, #357057);
+    background-size: 4.5rem 4.5rem, 4.5rem 4.5rem, auto, auto;
+    border-top: 8px solid rgba(255,255,255,0.55);
+    transform: rotate(-2deg);
+    z-index: 0;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    width: min(1080px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(17rem, 0.85fr);
+    gap: 2rem;
+    align-items: end;
+  }
+
+  .cover-copy {
+    padding: clamp(1.2rem, 4vw, 3rem) 0;
+  }
+
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.85rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pitch-dark);
+  }
+
+  .kicker::before,
+  .kicker::after {
+    content: "";
+    width: 1.6rem;
+    height: 0.24rem;
+    border-radius: 99px;
+    background: var(--gold);
+  }
+
+  h1 {
+    max-width: 11ch;
+    font-family: 'Fredoka', system-ui, sans-serif;
+    font-size: clamp(3rem, 12vw, 8rem);
+    line-height: 0.82;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0.08em 0.08em 0 var(--pitch-dark);
+  }
+
+  h1 span {
+    display: block;
+    color: var(--gold);
+    text-shadow: 0.08em 0.08em 0 var(--ink);
+  }
+
+  .subtitle {
+    max-width: 38rem;
+    margin-top: 1rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #24483d;
+  }
+
+  .subtitle strong { color: var(--ink); }
+
+  .club-board {
+    background: rgba(255, 248, 235, 0.95);
+    border: 2px solid rgba(23,23,23,0.16);
+    border-radius: 16px;
+    box-shadow: 0 18px 35px rgba(23,23,23,0.16);
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  .scoreline {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    background: var(--ink);
+    color: white;
+    padding: 0.9rem;
+    gap: 0.8rem;
+  }
+
+  .score {
+    font-family: 'Fredoka', system-ui, sans-serif;
+    font-size: 2.4rem;
+    line-height: 1;
+    color: var(--gold);
+  }
+
+  .club {
+    display: grid;
+    gap: 0.45rem;
+    justify-items: center;
+    text-align: center;
+    min-width: 0;
+  }
+
+  .club-name {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+  }
+
+  .crest {
+    width: 4.7rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 3px solid white;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.28);
+  }
+
+  .crest img {
+    width: 82%;
+    height: 82%;
+    object-fit: contain;
+  }
+
+  .fallback-mark {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-family: 'Fredoka', system-ui, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+
+  .fallback-mark.juve {
+    color: white;
+    background: repeating-linear-gradient(90deg, #101010 0 0.8rem, #fff 0.8rem 1.6rem);
+    text-shadow: 0 2px 0 #101010;
+  }
+
+  .fallback-mark.lech {
+    color: white;
+    background: linear-gradient(135deg, #0b4daa 0 50%, #1e88e5 50%);
+    text-shadow: 0 2px 0 #06336f;
+  }
+
+  .board-note {
+    padding: 1rem 1.1rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+
+  .board-note strong { color: var(--ink); }
+
+  .quick-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 1.1rem;
+  }
+
+  .quick-nav a {
+    border: 1px solid rgba(23,23,23,0.16);
+    background: rgba(255,255,255,0.55);
+    border-radius: 999px;
+    padding: 0.45rem 0.75rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  main {
+    width: min(980px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+  }
+
+  .intro-card,
+  .phase,
+  .final-card {
+    background: rgba(255,255,255,0.8);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 22px rgba(87, 64, 34, 0.08);
+  }
+
+  .intro-card {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.4rem;
+    padding: 1.4rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .intro-card h2,
+  .phase-title h2,
+  .final-card h2 {
+    font-family: 'Fredoka', system-ui, sans-serif;
+    font-size: clamp(1.45rem, 4vw, 2.2rem);
+    line-height: 1;
+  }
+
+  .intro-card p,
+  .phase-lead,
+  .final-card p {
+    color: var(--muted);
+    margin-top: 0.6rem;
+  }
+
+  .rules {
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  .rule {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.65rem;
+    align-items: start;
+    padding: 0.75rem;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+  }
+
+  .rule strong {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .ball {
+    width: 1.35rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 50% 50%, #111 0 0.23rem, transparent 0.24rem),
+      radial-gradient(circle at 25% 25%, #111 0 0.12rem, transparent 0.13rem),
+      radial-gradient(circle at 75% 30%, #111 0 0.12rem, transparent 0.13rem),
+      radial-gradient(circle at 35% 76%, #111 0 0.12rem, transparent 0.13rem),
+      white;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.18);
+  }
+
+  .phase {
+    margin-top: 1.25rem;
+  }
+
+  .phase-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.05rem 1.2rem;
+    background:
+      linear-gradient(90deg, rgba(255,255,255,0.08), transparent),
+      var(--ink);
+    color: white;
+  }
+
+  .phase-number {
+    width: 3.2rem;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--ink);
+    font-family: 'Fredoka', system-ui, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .phase-title h2 {
+    color: white;
+  }
+
+  .meta {
+    margin-top: 0.2rem;
+    color: rgba(255,255,255,0.66);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+
+  .badge {
+    justify-self: end;
+    background: var(--lech);
+    color: white;
+    border-radius: 999px;
+    padding: 0.35rem 0.7rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.64rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+
+  .phase-body {
+    padding: 1.25rem;
+  }
+
+  .section-label {
+    margin: 1.2rem 0 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--red);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .section-label:first-child { margin-top: 0; }
+
+  .drill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    gap: 0.75rem;
+  }
+
+  .drill {
+    min-height: 100%;
+    padding: 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--paper);
+  }
+
+  .drill h3 {
+    font-family: 'Fredoka', system-ui, sans-serif;
+    font-size: 1.08rem;
+    line-height: 1.1;
+  }
+
+  .drill p {
+    margin-top: 0.35rem;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.75rem;
+    overflow: hidden;
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+
+  thead {
+    background: var(--ink);
+    color: white;
+  }
+
+  th {
+    padding: 0.65rem 0.8rem;
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 500;
+  }
+
+  td {
+    padding: 0.7rem 0.8rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    overflow-wrap: anywhere;
+  }
+
+  tbody tr:nth-child(even) { background: rgba(241, 223, 189, 0.42); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .sound {
+    font-family: 'DM Mono', monospace;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--lech);
+    white-space: nowrap;
+  }
+
+  .chant {
+    margin-top: 0.9rem;
+    padding: 0.9rem 1rem;
+    background:
+      repeating-linear-gradient(135deg, rgba(0,0,0,0.06) 0 0.55rem, transparent 0.55rem 1.1rem),
+      white;
+    border: 1px dashed rgba(23,23,23,0.26);
+    border-radius: 10px;
+  }
+
+  .chant strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--red);
+  }
+
+  .match-plan {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 0.75rem;
+  }
+
+  .minute {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: white;
+    overflow: hidden;
+  }
+
+  .minute b {
+    display: block;
+    background: var(--pitch-dark);
+    color: white;
+    padding: 0.42rem 0.65rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .minute ul {
+    list-style: none;
+    padding: 0.65rem;
+  }
+
+  .minute li {
+    position: relative;
+    padding-left: 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .minute li + li { margin-top: 0.35rem; }
+  .minute li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .final-card {
+    margin-top: 1.25rem;
+    padding: 1.4rem;
+    background:
+      linear-gradient(135deg, rgba(28,100,199,0.12), rgba(244,200,74,0.18)),
+      white;
+  }
+
+  .final-card ul {
+    list-style: none;
+    display: grid;
+    gap: 0.55rem;
+    margin-top: 1rem;
+  }
+
+  .final-card li {
+    padding: 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.72);
+  }
+
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.64);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  footer span { color: var(--gold); }
+
+  @media (max-width: 760px) {
+    body {
+      background:
+        radial-gradient(circle at 8% 5%, rgba(255,255,255,0.86) 0 2.5rem, transparent 2.6rem),
+        radial-gradient(circle at 92% 8%, rgba(255,255,255,0.8) 0 2.2rem, transparent 2.3rem),
+        linear-gradient(180deg, #9dcdb6 0, var(--paper) 22rem);
+    }
+
+    .hero {
+      min-height: auto;
+      padding: 0.9rem;
+    }
+
+    .hero-inner,
+    .intro-card {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .cover-copy {
+      padding: 2.4rem 0 0.8rem;
+    }
+
+    h1 {
+      font-size: clamp(3.15rem, 18vw, 5.2rem);
+    }
+
+    .subtitle {
+      font-size: 1rem;
+    }
+
+    .club-board {
+      margin-bottom: 1.1rem;
+      border-radius: 12px;
+    }
+
+    .scoreline {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    .score {
+      order: -1;
+      font-size: 1.9rem;
+    }
+
+    .club {
+      grid-template-columns: auto 1fr;
+      justify-items: start;
+      width: 100%;
+      text-align: left;
+    }
+
+    .crest {
+      width: 3.8rem;
+    }
+
+    main {
+      width: min(100% - 1rem, 980px);
+      padding-top: 0.9rem;
+    }
+
+    .intro-card,
+    .phase,
+    .final-card {
+      border-radius: 10px;
+    }
+
+    .intro-card,
+    .phase-body,
+    .final-card {
+      padding: 0.9rem;
+    }
+
+    .phase-header {
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 0.75rem;
+      padding: 0.9rem;
+    }
+
+    .phase-number {
+      width: 2.45rem;
+      font-size: 1.35rem;
+    }
+
+    .badge { display: none; }
+
+    .phase-title h2 {
+      font-size: 1.38rem;
+    }
+
+    .meta {
+      font-size: 0.6rem;
+      line-height: 1.35;
+    }
+
+    .drill-grid,
+    .match-plan {
+      grid-template-columns: 1fr;
+    }
+
+    table {
+      display: block;
+      border-radius: 0;
+      font-size: 0.9rem;
+    }
+
+    thead { display: none; }
+
+    tbody,
+    tr,
+    td {
+      display: block;
+      width: 100%;
+    }
+
+    tr {
+      margin-bottom: 0.7rem;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+    }
+
+    tbody tr:nth-child(even) { background: white; }
+
+    td {
+      display: grid;
+      grid-template-columns: minmax(5.6rem, 34%) minmax(0, 1fr);
+      gap: 0.65rem;
+      padding: 0.65rem 0.75rem;
+      line-height: 1.45;
+    }
+
+    td::before {
+      content: attr(data-label);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+
+    td.sound {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--ink);
+      color: white;
+      gap: 0.75rem;
+    }
+
+    td.sound::before {
+      color: rgba(255,255,255,0.62);
+    }
+  }
+
+  @media (max-width: 380px) {
+    td {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+
+    .quick-nav a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="cover-copy">
+      <div class="kicker">private dad training</div>
+      <h1>La Partita <span>dei Suoni</span></h1>
+      <p class="subtitle"><strong>Juventus vs Lech, but the trophy is bedtime reading.</strong> A 4-week Polish pronunciation plan for an Italian dad who wants to read Polish stories aloud to his daughter.</p>
+      <nav class="quick-nav" aria-label="Training shortcuts">
+        <a href="#warmup">Warm-up</a>
+        <a href="#first-half">First half</a>
+        <a href="#second-half">Second half</a>
+        <a href="#final">Final match</a>
+      </nav>
+    </div>
+
+    <aside class="club-board" aria-label="Club-inspired scoreboard">
+      <div class="scoreline">
+        <div class="club">
+          <div class="crest">
+            <img src="juventus-logo.png" alt="Juventus logo" onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+            <span class="fallback-mark juve" hidden>J</span>
+          </div>
+          <div class="club-name">Juventus Dad</div>
+        </div>
+        <div class="score">0 : 1</div>
+        <div class="club">
+          <div class="crest">
+            <img src="lech-logo.png" alt="Lech Poznan logo" onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+            <span class="fallback-mark lech" hidden>LP</span>
+          </div>
+          <div class="club-name">Polish Sounds</div>
+        </div>
+      </div>
+      <p class="board-note"><strong>Today's fixture:</strong> Juventus discipline versus the Lech Poznan boss level. The score starts 0:1 because Polish clusters get the early goal.</p>
+    </aside>
+  </div>
+</header>
+
+<main>
+  <section class="intro-card" aria-labelledby="mission-title">
+    <div>
+      <h2 id="mission-title">The Mission</h2>
+      <p>He does not need Polish grammar. He needs a reliable mouth-mechanic system: see letters, decode sounds, read out loud, make the kid smile. Every training block is built like football practice: repeat, slow down, speed up, then perform.</p>
+    </div>
+    <div class="rules">
+      <div class="rule"><span class="ball"></span><div><strong>Rule 1</strong><br>Polish spelling is consistent. Trust the letters.</div></div>
+      <div class="rule"><span class="ball"></span><div><strong>Rule 2</strong><br>Italian vowels are an advantage. Keep them clean.</div></div>
+      <div class="rule"><span class="ball"></span><div><strong>Rule 3</strong><br>No phantom vowels inside clusters. Szczecin is not "se-che-cheen".</div></div>
+    </div>
+  </section>
+
+  <section class="phase" id="warmup">
+    <div class="phase-header">
+      <div class="phase-number">1</div>
+      <div class="phase-title">
+        <h2>Warm-up: Alphabet Fitness</h2>
+        <div class="meta">Week 1 · clean touches · 15 minutes per day</div>
+      </div>
+      <div class="badge">Foundation</div>
+    </div>
+    <div class="phase-body">
+      <p class="phase-lead">Start with the sounds that decide whether Polish looks scary or playable. The aim is not speed yet. The aim is confidence.</p>
+
+      <div class="section-label">Starting eleven of Polish sounds</div>
+      <table>
+        <thead>
+          <tr><th>Sound</th><th>How to say it</th><th>Football memory hook</th><th>Difficulty</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="sound">ł</td><td>English "w" in "wood"</td><td>Łódź starts like "woodge", not Italian L.</td><td>Medium</td></tr>
+          <tr><td class="sound">w</td><td>Italian "v"</td><td>Warszawa starts like "Var-shava". Easy for Italians.</td><td>Easy</td></tr>
+          <tr><td class="sound">sz</td><td>English "sh"</td><td>Like telling the stadium: "shhh".</td><td>Easy</td></tr>
+          <tr><td class="sound">cz</td><td>English "ch"</td><td>Like Italian "c" in ciao, but firmer.</td><td>Easy</td></tr>
+          <tr><td class="sound">rz / ż</td><td>French "j" in jour</td><td>A buzzy stadium chant, not Italian "r-z".</td><td>Medium</td></tr>
+          <tr><td class="sound">ą</td><td>Nasal "on"</td><td>Hold it in the nose before a consonant.</td><td>Medium</td></tr>
+          <tr><td class="sound">ę</td><td>Nasal "en" or plain final "e"</td><td>At the end of a word, relax it to normal e.</td><td>Medium</td></tr>
+          <tr><td class="sound">ć / ci</td><td>Soft "ch-y"</td><td>Very close to Italian "ci" in ciao.</td><td>Easy</td></tr>
+          <tr><td class="sound">ń / ni</td><td>Italian "gn"</td><td>Like gnocchi. Free goal.</td><td>Easy</td></tr>
+          <tr><td class="sound">dź / dzi</td><td>Soft "dj-y"</td><td>Small, soft, fast. Do not make it heavy.</td><td>Hard</td></tr>
+        </tbody>
+      </table>
+
+      <div class="section-label">Training plan</div>
+      <div class="match-plan">
+        <div class="minute"><b>Days 1-2</b><ul><li>ł, w, sz, cz</li><li>Read 20 Polish city names aloud</li></ul></div>
+        <div class="minute"><b>Days 3-4</b><ul><li>Add ą, ę, rz, ż</li><li>Record one minute and listen back</li></ul></div>
+        <div class="minute"><b>Days 5-6</b><ul><li>Add ć, ś, ź, ń, dź</li><li>Repeat slowly, then twice as fast</li></ul></div>
+        <div class="minute"><b>Day 7</b><ul><li>Read one tiny story page</li><li>Ignore meaning, chase sound</li></ul></div>
+      </div>
+
+      <div class="chant"><strong>Week 1 whistle</strong> If he can say "Łódź, Warszawa, Szczecin, dzień dobry" without panic, he is ready for the first half.</div>
+    </div>
+  </section>
+
+  <section class="phase" id="first-half">
+    <div class="phase-header">
+      <div class="phase-number">2</div>
+      <div class="phase-title">
+        <h2>First Half: No Phantom Vowels</h2>
+        <div class="meta">Week 2 · clusters · the hard part</div>
+      </div>
+      <div class="badge">Pressure</div>
+    </div>
+    <div class="phase-body">
+      <p class="phase-lead">Italian wants to insert tiny vowels between consonants. Polish says no. This week trains compression: every consonant gets touched, but nothing extra appears.</p>
+
+      <div class="section-label">Famous hard words, decoded</div>
+      <table>
+        <thead>
+          <tr><th>Word</th><th>Chunk it</th><th>Meaning</th><th>Coach note</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="sound">szczęście</td><td>szczę-ście</td><td>happiness</td><td>Say "sh-chen-shche", then smooth it.</td></tr>
+          <tr><td class="sound">przepraszam</td><td>prze-pra-szam</td><td>sorry</td><td>No "pe-rze". Keep prz tight.</td></tr>
+          <tr><td class="sound">chrząszcz</td><td>chrzą-szcz</td><td>beetle</td><td>A monster word. Use it as gym equipment.</td></tr>
+          <tr><td class="sound">W Szczecinie</td><td>w szcze-ci-nie</td><td>in Szczecin</td><td>The classic Polish boss fight.</td></tr>
+          <tr><td class="sound">Grzegorz</td><td>Grze-gorz</td><td>Gregory</td><td>Italian rolled r helps here.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="section-label">Drills</div>
+      <div class="drill-grid">
+        <div class="drill"><h3>Slow Motion VAR</h3><p>Stretch the cluster for 3 seconds: s-z-cz. Then compress it over 5 repetitions.</p></div>
+        <div class="drill"><h3>No Extra Touches</h3><p>Read "prz, krz, trz, szcz" ten times. If a vowel appears, restart the attack.</p></div>
+        <div class="drill"><h3>Stadium Echo</h3><p>Say the word once quietly, once normally, once like a chant. Same sounds, more confidence.</p></div>
+      </div>
+
+      <div class="chant"><strong>Half-time score</strong> He should now read common Polish words with clusters without stopping every two letters.</div>
+    </div>
+  </section>
+
+  <section class="phase" id="second-half">
+    <div class="phase-header">
+      <div class="phase-number">3</div>
+      <div class="phase-title">
+        <h2>Second Half: Real Sentences</h2>
+        <div class="meta">Week 3 · rhythm · reading aloud</div>
+      </div>
+      <div class="badge">Flow</div>
+    </div>
+    <div class="phase-body">
+      <p class="phase-lead">Now the training becomes dad-shaped: fewer isolated words, more bedtime-story rhythm. Meaning is optional. Flow matters.</p>
+
+      <div class="section-label">Materials that work</div>
+      <div class="drill-grid">
+        <div class="drill"><h3>Polish Picture Books</h3><p>Pick pages with short sentences and repeat them until the mouth stops arguing.</p></div>
+        <div class="drill"><h3>Forvo / TTS Check</h3><p>Read first, then listen. The correction sticks better after an attempt.</p></div>
+        <div class="drill"><h3>Football Headlines</h3><p>Use Polish sports headlines for daily rhythm practice. Familiar topic, lower stress.</p></div>
+        <div class="drill"><h3>Daughter Test</h3><p>If the story sounds warm and steady, small pronunciation mistakes are fine.</p></div>
+      </div>
+
+      <div class="section-label">Match plan</div>
+      <div class="match-plan">
+        <div class="minute"><b>Days 15-17</b><ul><li>Read 3 short sentences</li><li>Repeat the same text tomorrow faster</li></ul></div>
+        <div class="minute"><b>Days 18-19</b><ul><li>Read one paragraph</li><li>Mark every difficult cluster</li></ul></div>
+        <div class="minute"><b>Days 20-21</b><ul><li>Read without preparation</li><li>Keep going after mistakes</li></ul></div>
+      </div>
+
+      <div class="chant"><strong>Week 3 whistle</strong> He can now read unseen Polish sentences aloud at a natural bedtime pace.</div>
+    </div>
+  </section>
+
+  <section class="phase" id="final">
+    <div class="phase-header">
+      <div class="phase-number">4</div>
+      <div class="phase-title">
+        <h2>Final Match: Bedtime Story</h2>
+        <div class="meta">Week 4 · performance · dad mode</div>
+      </div>
+      <div class="badge">Final</div>
+    </div>
+    <div class="phase-body">
+      <p class="phase-lead">The target is not native Polish. The target is clear, brave, loving reading. A foreign accent is allowed. Giving up is not.</p>
+
+      <div class="section-label">Most common Italian mistakes</div>
+      <table>
+        <thead>
+          <tr><th>Mistake</th><th>Italian instinct</th><th>Polish correction</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="sound">ł</td><td>Say it like Italian L</td><td>Make it English W: Łódź is not Lodz.</td></tr>
+          <tr><td class="sound">w</td><td>Say it like English W</td><td>Make it Italian V.</td></tr>
+          <tr><td class="sound">stress</td><td>Move stress freely</td><td>Stress usually falls on the second-to-last syllable.</td></tr>
+          <tr><td class="sound">clusters</td><td>Add tiny vowels</td><td>Compress. No filler vowels.</td></tr>
+          <tr><td class="sound">ą / ę</td><td>Remove nasal sound</td><td>Keep nasal resonance before consonants.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="section-label">Final week plan</div>
+      <div class="match-plan">
+        <div class="minute"><b>Days 22-24</b><ul><li>Drill two weakest sounds</li><li>Read the same page daily</li></ul></div>
+        <div class="minute"><b>Days 25-26</b><ul><li>Read a full short story</li><li>Record and check clarity</li></ul></div>
+        <div class="minute"><b>Day 27</b><ul><li>Practice with expression</li><li>Slow down before hard words</li></ul></div>
+        <div class="minute"><b>Day 28</b><ul><li>Read to his daughter</li><li>Celebrate the trophy</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-card" aria-labelledby="trophy-title">
+    <h2 id="trophy-title">Trophy Room</h2>
+    <p>After four weeks, the win condition is simple: he can open a Polish children's book, decode the sounds, and read aloud with enough clarity and warmth that the story works.</p>
+    <ul>
+      <li><strong>Juventus advantage:</strong> discipline, repetition, match mentality.</li>
+      <li><strong>Lech advantage:</strong> Polish words, Poznan energy, the local boss level.</li>
+      <li><strong>Dad advantage:</strong> the audience already wants him to win.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  La Partita dei Suoni · Juventus spirit · Lech challenge · <span>bedtime story trophy</span>
+</footer>
+
+<script>
+  document.querySelectorAll('table').forEach((table) => {
+    const labels = Array.from(table.querySelectorAll('thead th')).map((th) => th.textContent.trim());
+
+    table.querySelectorAll('tbody tr').forEach((row) => {
+      Array.from(row.children).forEach((cell, index) => {
+        if (labels[index]) {
+          cell.setAttribute('data-label', labels[index]);
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
